@@ -9,6 +9,8 @@
         {% csrf_token %}
         <h2>Login</h2>
 
+        <hr>
+
         {% if messages %}
         {{ message.tags }}
         <div class="alert alert-primary" role="alert">
@@ -16,7 +18,7 @@
             {{ message }}
             {% endfor %}
         </div>
-        {% endif %}
+{% endif %}
        
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Username</label>

@@ -37,8 +37,8 @@ def recipes(request):
 
 
 @login_required(login_url="/login/")
-def update_recipe(request, id):
-    queryset = Recipe.objects.get(id = id)
+def update_recipe(request, slug):
+    queryset = Recipe.objects.get(slug = slug)
     
     if request.method == "POST":
         data = request.POST
